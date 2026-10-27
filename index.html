@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006747">
+  <meta name="description" content="An optional INFO 4300 lesson on motivation, leadership, ethics, communication, and teams. Recorded narration, practice, a full transcript, and Library Shift.">
+  <title>Section 5: Leading | INFO 4300</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="lesson-data.js"></script>
+  <script defer src="audio-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="identity"><img src="unt-circle-logo.png" width="72" height="72" alt="University of North Texas"><div><strong>INFO 4300</strong><span>Management of Information Agencies</span></div></div>
+  <nav class="header-nav" aria-label="Resources"><a href="transcript.html">Read the lesson</a><details class="settings"><summary>Sound &amp; display</summary><div><label><input type="checkbox" id="mute-all"> Mute narration</label><label for="narration-volume">Narration volume</label><input id="narration-volume" type="range" min="0" max="1" step="0.05" value="1"><label><input type="checkbox" id="reduce-motion"> Reduce motion</label><p>Audio starts only when you press Play. The game has separate sound controls.</p></div></details></nav>
+</header>
+<main id="main" tabindex="-1">
+  <section id="home" class="home">
+    <div class="hero-copy"><p class="eyebrow">SECTION 05 / LEADING</p><h1>Leading people.<br>Working together.</h1><p class="hero-intro">Connect motivation, judgment, and communication to a shared purpose.</p><p class="start-description">A guided lesson with audio, visuals, and short activities. About 10-15 minutes, plus an optional game.</p><button id="start" class="button primary start">START HERE: Begin Section 5 <span aria-hidden="true">→</span></button><button id="resume-chapter" class="text-button" hidden></button><p id="bookmark-note" class="small">Your last chapter is saved in this browser.</p><p class="small hero-note">About 14 minutes with practice. Optional and ungraded. Read Chapters 13–17 in your textbook and the assigned case in Canvas.</p></div>
+    <figure class="hero-art"><img src="cedar-display.svg" width="1120" height="760" alt="Illustration of Cedar Crossing colleagues preparing a community history display with photographs, audio, and captions."><figcaption><span class="small-label">OUR FICTIONAL SETTING</span><strong>Cedar Crossing Library</strong><span>Different expertise. A shared purpose.</span></figcaption></figure>
+    <div class="home-bottom"><span><b>11</b> short chapters</span><span><b>4</b> practice checks</span><span><b>1</b> optional game</span><a href="transcript.html">Prefer reading? Open the full transcript →</a></div>
+  </section>
+  <section id="lesson" class="lesson-shell" hidden aria-label="Guided lesson">
+    <aside class="lesson-menu"><p class="eyebrow">YOUR ROUTE</p><nav aria-label="Lesson chapters" id="chapter-nav"></nav><button class="text-button" id="go-home">← Lesson home</button><a class="text-link" href="transcript.html">Full reading alternative</a><button class="text-button" id="jump-game">Optional game →</button></aside>
+    <div class="lesson-main"><div class="mobile-chapters"><label for="chapter-select">Jump to chapter</label><select id="chapter-select"></select></div>
+      <div class="lesson-meta"><span id="chapter-kicker" class="eyebrow"></span><span id="progress-text"></span></div><progress id="lesson-progress" max="11" value="1" aria-label="Current chapter position"></progress>
+      <h1 id="chapter-title" tabindex="-1"></h1>
+      <ol id="route" class="route" aria-label="Leading questions"></ol>
+      <p class="route-note">An original teaching diagram. These connected questions are not a fixed textbook formula.</p>
+      <section class="media-panel" aria-label="Recorded narration"><div class="audio-row"><audio id="narration" controls preload="metadata" aria-label="Chapter narration"></audio><button id="replay" class="compact">Replay</button><label class="speed-label" for="speed">Speed <select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div><div id="media-error" role="status" hidden>Audio is unavailable. You can read this chapter below or open the full transcript.</div><div class="caption-row"><span class="small-label">CAPTIONS</span><button id="toggle-captions" class="text-button" aria-pressed="true">Hide captions</button></div><p id="captions" class="captions" aria-live="off">Press Play to hear this chapter. Captions appear here.</p><p class="audio-credit">Recorded AI narration · Kokoro Heart · <a id="download-audio" href="#" download>Download chapter audio</a></p></section>
+      <div id="visual" class="visual"></div>
+      <p class="takeaway" id="takeaway"></p>
+      <div id="practice-slot"></div>
+      <details class="read-chapter" id="chapter-transcript"><summary>Read this chapter</summary><div id="chapter-text"></div><p><a id="caption-download" href="#" download>Download timed captions (VTT)</a></p></details>
+      <details class="explore"><summary>Explore more</summary><div id="explore-content"></div></details>
+      <div class="lesson-pagination"><button id="previous" class="button secondary">← Back</button><span id="page-label"></span><button id="next" class="button primary">Next →</button></div>
+    </div>
+  </section>
+  <section id="game" class="game-section" hidden aria-labelledby="game-heading" tabindex="-1">
+    <div class="game-heading-row"><div><p class="eyebrow">OPTIONAL / ABOUT 2–3 MINUTES</p><h1 id="game-heading" tabindex="-1">Library Shift</h1></div><button id="skip-game" class="button secondary">Skip game</button></div>
+    <p class="game-intro">Make small decisions during Cedar Crossing’s display project. Choose a response, read the feedback, and carry the idea into the next turn.</p>
+    <div class="game-settings"><fieldset><legend>Choose your pace</legend><label><input type="radio" name="game-mode" value="timed"> Timed challenge</label><label><input type="radio" name="game-mode" value="untimed" checked> Untimed decisions</label></fieldset><label><input type="checkbox" id="game-shortcuts" checked> Use 1, 2, 3 keys when the game has focus</label><button id="game-sound" class="compact" aria-pressed="false">Sounds off</button></div>
+    <div class="game-toolbar"><span>Score <b id="score">0</b></span><span>Lives <b id="lives">3</b></span><span>Streak <b id="streak">0</b></span><span>Best on this device <b id="best">0</b></span></div>
+    <div id="game-board" class="game-board" role="group" tabindex="0" aria-label="Library Shift play area. Choose one of three responses.">
+      <div class="game-board-top"><span id="round-label">Ready for your shift?</span><span id="clock" aria-hidden="true"></span></div>
+      <div id="drop-zone" class="drop-zone"><div id="book-card" class="book-card"><span id="gold-label" class="small-label">START WITH A PRACTICE TURN</span><p id="statement">Start with an unscored practice decision. Every turn pauses for feedback. Untimed mode is selected.</p></div></div>
+      <div id="baskets" class="baskets"><button data-basket="0" disabled><span class="basket-number" aria-hidden="true">1</span>Response 1</button><button data-basket="1" disabled><span class="basket-number" aria-hidden="true">2</span>Response 2</button><button data-basket="2" disabled><span class="basket-number" aria-hidden="true">3</span>Response 3</button></div>
+      <div id="game-feedback" class="game-feedback" role="status"></div>
+      <div class="game-actions"><button id="game-start" class="button primary">Start practice</button><button id="game-continue" class="button primary" hidden>Continue →</button><button id="game-pause" class="button secondary" disabled>Pause</button><button id="game-restart" class="text-button">Restart</button></div>
+    </div><p class="small">Learning content is the same in both modes. Personal bests are kept separately. No account, shared leaderboard, or course grade.</p><div id="game-announcement" class="sr-only" aria-live="polite"></div>
+  </section>
+  <section id="finish" class="finish" hidden><p class="eyebrow">TAKE IT INTO YOUR READING</p><h1 id="finish-title" tabindex="-1">Connect purpose, people, and support.</h1><p>Understand people. Guide the work. Judge fairly. Communicate. Empower and review.</p><p>Read Chapters 13–17 in your textbook and <cite>The Self-Managed Team Experiment</cite> in Canvas, then develop your own case analysis. Check Canvas for the current assignment requirements and deadline.</p><div class="finish-actions"><button id="review-case" class="button primary">Review case preparation</button><button id="replay-game" class="button secondary">Play the optional game</button><a href="transcript.html">Read the full lesson</a></div><p><a href="https://info4300.github.io/INFO4300_Section5/">Open the existing Section 5 course guide</a></p><p class="small">This optional resource does not record course completion or award credit.</p></section>
+</main>
+<footer><span>INFO 4300 · University of North Texas</span><a href="sources.html">Sources &amp; accessibility</a><span>All Cedar Crossing examples are fictional.</span></footer>
+<noscript><div class="noscript">The guided activities need JavaScript. <a href="transcript.html">Read the complete lesson and activity explanations</a> or play the chapter recordings from the transcript.</div></noscript>
+</body>
+</html>
